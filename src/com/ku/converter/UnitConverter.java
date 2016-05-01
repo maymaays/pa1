@@ -1,9 +1,13 @@
 package com.ku.converter;
 
 import com.ku.converter.unit.Unit;
+/**
+ * Respresents the formula to converts the unit
+ * @author Methawee Apinainarong 5810546714
+ *
+ */
 
 public class UnitConverter {
-	
 	/***
 	 * perform conversions units by usings converter function)
 	 * @param amount - the value of current unit
