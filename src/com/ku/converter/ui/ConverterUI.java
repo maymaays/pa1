@@ -130,65 +130,37 @@ public class ConverterUI extends JFrame {
 	}
 
 	class UnitAction implements ActionListener {
-		
-			private UnitType type;
-			
-			public UnitAction(UnitType utype) {
-				type = utype;
-			}
-			
-			public void changeUnits(UnitType utype ){
-				Unit[] units = unitconverter.getUnits(utype);
-				firstUnit.removeAllItems();
-				secondUnit.removeAllItems();
-				for ( Unit u : units ) {
-					firstUnit.addItem(u);
-					secondUnit.addItem(u);
-				}
-			}
 
-			@Override
-			/**
-			 * If the type is the same as unit type it will change the unit into its type.
-			 */
-			public void actionPerformed(ActionEvent event) {
-				
-				if ( type == UnitType.Length) {
-					changeUnits(UnitType.Length);
-				}
-				else if ( type == UnitType.Area) {
-					changeUnits(UnitType.Area);
-				}
-				else if ( type == UnitType.Weigth) {
-					changeUnits(UnitType.Weigth);
-				}
-				else if ( type == UnitType.Volume) {
-					changeUnits(UnitType.Volume);
-				} 
-			}
-				
+		private UnitType type;
+
+		public UnitAction(UnitType utype) {
+			type = utype;
 		}
 
-//			if (utype == UnitType.Length) {
-//				UnitType[] u = UnitFactory.getInstance().getUnits(utype);
-//				firstUnit = new JComboBox<Length>();
-//				secondUnit = new JComboBox<Length>();
-//				for (UnitType u : utype)
-//					secondUnit.addItem(u);
-//				firstUnit.addItem(utype.Length);
-//			} else if (utype == UnitType.Area) {
-//				firstUnit.addItem(utype);
-//			} else if (utype == UnitType.Weigth) {
-//				firstUnit.addItem(utype);
-//			} else if (utype == UnitType.Volume) {
-//				firstUnit.addItem(utype);
-//			}
-//		}
+		public void changeUnits(UnitType utype) {
+			Unit[] units = unitconverter.getUnits(utype);
+			firstUnit.removeAllItems();
+			secondUnit.removeAllItems();
+			for (Unit u : units) {
+				firstUnit.addItem(u);
+				secondUnit.addItem(u);
+			}
+		}
 
-//		public void actionPerformed(ActionEvent event) {
-//
-//		}
-//	}
+		public void actionPerformed(ActionEvent event) {
+
+			if (type == UnitType.Length) {
+				changeUnits(UnitType.Length);
+			} else if (type == UnitType.Area) {
+				changeUnits(UnitType.Area);
+			} else if (type == UnitType.Weigth) {
+				changeUnits(UnitType.Weigth);
+			} else if (type == UnitType.Volume) {
+				changeUnits(UnitType.Volume);
+			}
+		}
+
+	}
 
 	/***
 	 * Perform the program run, and the window will open with 700 x 90 (Width *
