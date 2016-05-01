@@ -82,7 +82,10 @@ public class ConverterUI extends JFrame {
 		input = new JTextField(7);
 		this.add(input);
 		input.setEditable(false);
-
+		
+		firstUnit = new JComboBox<>();
+		this.add(firstUnit);
+		
 		JLabel equals = new JLabel(" = ");
 		this.add(equals);
 
@@ -90,10 +93,8 @@ public class ConverterUI extends JFrame {
 		this.add(result);
 		result.setEditable(false);
 
-		firstUnit = new JComboBox<>();
 		secondUnit = new JComboBox<>();
 
-		this.add(firstUnit);
 		this.add(secondUnit);
 
 		convertButton = new JButton("Convert!");
@@ -149,23 +150,19 @@ public class ConverterUI extends JFrame {
 
 		public void actionPerformed(ActionEvent event) {
 
-			if (type == UnitType.Length) {
-				changeUnits(UnitType.Length);
-			} else if (type == UnitType.Area) {
-				changeUnits(UnitType.Area);
-			} else if (type == UnitType.Weigth) {
-				changeUnits(UnitType.Weigth);
-			} else if (type == UnitType.Volume) {
-				changeUnits(UnitType.Volume);
+			if (type == UnitType.LENGTH) {
+				changeUnits(UnitType.LENGTH);
+			} else if (type == UnitType.AREA) {
+				changeUnits(UnitType.AREA);
+			} else if (type == UnitType.WEIGHT) {
+				changeUnits(UnitType.WEIGHT);
+			} else if (type == UnitType.VOLUME) {
+				changeUnits(UnitType.VOLUME);
 			}
 		}
 
 	}
 
-	/***
-	 * Perform the program run, and the window will open with 700 x 90 (Width *
-	 * Height).
-	 */
 	public void run() {
 		pack();
 		setBounds(50, 50, 600, 120);
@@ -179,33 +176,31 @@ public class ConverterUI extends JFrame {
 	 */
 	class ConvertButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
-			// if (input.isEditable()) {
-			// String firstinput = input.getText().trim();
-			// if (firstinput.length() > 0) {
-			// try {
-			// double value = Double.valueOf(firstinput);
-			// double convert = unitconverter.convert(value, (Length)
-			// firstUnit.getSelectedItem(),
-			// (Length) secondUnit.getSelectedItem());
-			// result.setText(String.format("%.3f", convert));
-			// } catch (NumberFormatException a) {
-			//
-			// }
-			// }
-			// } else if (!input.isEditable()) {
-			// String second = result.getText().trim();
-			// if (second.length() > 0) {
-			// try {
-			// double value = Double.valueOf(second);
-			// double convert = unitconverter.convert(value, (Length)
-			// secondUnit.getSelectedItem(),
-			// (Length) firstUnit.getSelectedItem());
-			// input.setText(String.format("%.3f", convert));
-			// } catch (NumberFormatException a) {
-			//
-			// }
-			// }
-			// }
+			if (input.isEditable()) {
+				String firstinput = input.getText().trim();
+				if (firstinput.length() > 0) {
+					try {
+						double value = Double.valueOf(firstinput);
+						double convert = unitconverter.convert(value, (Unit) firstUnit.getSelectedItem(),
+								(Unit) secondUnit.getSelectedItem());
+						result.setText(String.format("%.5g", convert));
+					} catch (NumberFormatException a) {
+
+					}
+				}
+			} else if (!input.isEditable()) {
+				String second = result.getText().trim();
+				if (second.length() > 0) {
+					try {
+						double value = Double.valueOf(second);
+						double convert = unitconverter.convert(value, (Unit) secondUnit.getSelectedItem(),
+								(Unit) firstUnit.getSelectedItem());
+						input.setText(String.format("%.5g", convert));
+					} catch (NumberFormatException a) {
+
+					}
+				}
+			}
 		}
 	}
 

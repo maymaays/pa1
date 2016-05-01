@@ -27,11 +27,11 @@ public class UnitFactory {
 
 	public Unit[] getUnit(UnitType utype) {
 
-		if (utype == UnitType.Length) {
+		if (utype == UnitType.LENGTH) {
 			return Length.values();
-		} else if (utype == UnitType.Area) {
+		} else if (utype == UnitType.AREA) {
 			return Area.values();
-		} else if (utype == UnitType.Weigth) {
+		} else if (utype == UnitType.WEIGHT) {
 			return Weight.values();
 		} else 
 			return Volume.values();	
