@@ -1,4 +1,8 @@
 package com.ku.converter.unit;
+/***
+ * Respresents the measurement of weight in standard unit
+ * @author Methawee Apinainarong 5810546714
+ */
 
 public enum Weight implements Unit {
 	
@@ -13,15 +17,26 @@ public enum Weight implements Unit {
 	private final String name;
 	private final double value;
 	
+	/***
+	 * Initialize with the name and value of unit 
+	 * @param name of unit
+	 * @param value of unit
+	 */
 	private Weight(String name, double value) {
 		this.name = name;
 		this.value = value;
 	}
 	
+	/***
+	 * Getting the value of current unit
+	 * @return value of unit
+	 */
 	public double getValue() {		
 		return this.value;
 	}
-	
+	/***
+	 * Getting the name of unit for example, gram, kilogram etc.
+	 */
 	public String toString() {
 		return this.name();
 	}

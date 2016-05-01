@@ -5,7 +5,7 @@ import com.ku.converter.unit.Unit;
 public class UnitConverter {
 	
 	/***
-	 * perform conversions between Distance and Length units (converter function)
+	 * perform conversions units by usings converter function)
 	 * @param amount - the value of current unit
 	 * @param fromUnit - the current unit
 	 * @param toUnit - the unit that user want to change
@@ -15,15 +15,13 @@ public class UnitConverter {
 		return (amount * fromUnit.getValue()) / toUnit.getValue();
 	}
 
-
 	/***
 	 * Perform getting the unit
-	 * @return the unit
+	 * @return the current unit of user
 	 */
 		
 		public Unit[] getUnits(UnitType utype) {
 			return UnitFactory.getInstance().getUnit(utype);
-			
 		}
 		
 }

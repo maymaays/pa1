@@ -1,8 +1,7 @@
 package com.ku.converter.unit;
 /***
- * Respresents the measurement or extent of something (distance)
- * from end to end in standard unit
- * @author methawee
+ * Respresents the measurement of length in standard unit
+ * @author Methawee Apinainarong 5810546714
  */
 public enum Length implements Unit {
 	
@@ -19,7 +18,7 @@ public enum Length implements Unit {
 	private final double value;
 	
 	/***
-	 * Perform the unit with value of the unit that you need
+	 * Initialize with the name and value of unit 
 	 * @param name of unit
 	 * @param value of unit
 	 */
@@ -28,14 +27,14 @@ public enum Length implements Unit {
 		this.value = value;
 	}
 	/***
-	 * Perform getting the value of unit
+	 * Getting the value of current unit
 	 * @return value of unit
 	 */
 	public double getValue() {		
 		return this.value;
 	}
 	/***
-	 * Perform getting the name of unit for example, meter, centimeter etc.
+	 * Getting the name of unit for example, meter, centimeter etc.
 	 */
 	public String toString() {
 		return this.name();

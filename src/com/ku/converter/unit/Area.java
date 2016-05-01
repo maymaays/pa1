@@ -1,4 +1,8 @@
 package com.ku.converter.unit;
+/***
+ * Respresents the measurement of area in standard unit
+ * @author Methawee Apinainarong 5810546714
+ */
 
 public enum Area implements Unit {
 	
@@ -14,15 +18,25 @@ public enum Area implements Unit {
 	private final String name;
 	private final double value;
 	
+	/***
+	 * Initialize with the name and value of unit 
+	 * @param name of unit
+	 * @param value of unit
+	 */
 	private Area(String name, double value) {
 		this.name = name;
 		this.value = value;
 	}
-	
+	/***
+	 * Getting the value of current unit
+	 * @return value of unit
+	 */
 	public double getValue() {		
 		return this.value;
 	}
-	
+	/***
+	 * Getting the name of unit for example, square meter, square kilometer etc.
+	 */
 	public String toString() {
 		return this.name();
 	}

@@ -6,19 +6,21 @@ import com.ku.converter.unit.Unit;
 import com.ku.converter.unit.Volume;
 import com.ku.converter.unit.Weight;
 
-public class UnitFactory {
+/**
+ * Respresents the current unit, and value in the list of current unit
+ * 
+ * @author Methawee Apinainarong 5810546714
+ *
+ */
+public enum UnitFactory {
 
-	private static UnitFactory instance = null;
+	INSTANCE;
 
 	private UnitFactory() {
 	}
 
 	public static UnitFactory getInstance() {
-
-		if (instance == null) {
-			instance = new UnitFactory();
-		}
-		return instance;
+		return INSTANCE;
 	}
 
 	public UnitType[] getUnitTypes() {
@@ -33,7 +35,7 @@ public class UnitFactory {
 			return Area.values();
 		} else if (utype == UnitType.WEIGHT) {
 			return Weight.values();
-		} else 
-			return Volume.values();	
+		} else
+			return Volume.values();
 	}
 }

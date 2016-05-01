@@ -6,13 +6,10 @@ package com.ku.converter.ui;
  */
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-
 import com.ku.converter.unit.*;
 import com.ku.converter.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 
 public class ConverterUI extends JFrame {
 
@@ -30,6 +27,11 @@ public class ConverterUI extends JFrame {
 	private JButton clearButton;
 	private UnitConverter unitconverter;
 
+	/**
+	 * Initialize the unit converter
+	 * 
+	 * @param converter
+	 */
 	public ConverterUI(UnitConverter converter) {
 
 		this.unitconverter = converter;
@@ -38,17 +40,12 @@ public class ConverterUI extends JFrame {
 		initComponents();
 	}
 
-	/***
-	 * Perform designing the window of distance converter program there are 2
-	 * style in this program, at first, if user click the button left > right
-	 * user can input the value field in the input textfield (on the left), then
-	 * choose your current unit by using combo box beside, afterwards user can
-	 * choose the unit that you wanna change, and the result will happen in the
-	 * result at the right field by click enter or click on convert button. then
-	 * again, in the right to left version, using similar as the first one, but
-	 * the input field will at the right of the window.
+	/**
+	 * Making the menu in the menu bar, there are length, area, weight, and
+	 * volume that user can choose to convert the unit
+	 * 
+	 * @return menu
 	 */
-
 	private JMenu makeMenu() {
 
 		menu = new JMenu("Unit type");
@@ -68,6 +65,11 @@ public class ConverterUI extends JFrame {
 		return menu;
 	}
 
+	/**
+	 * Designing the unit converter programme by using a lot of components in
+	 * GUI, such as JMenuBar - at the top of the frame, JButton - a button that
+	 * you can press to convert the value
+	 */
 	private void initComponents() {
 
 		FlowLayout layout = new FlowLayout();
@@ -81,10 +83,10 @@ public class ConverterUI extends JFrame {
 		input = new JTextField(7);
 		this.add(input);
 		input.setEditable(false);
-		
+
 		firstUnit = new JComboBox<>();
 		this.add(firstUnit);
-		
+
 		JLabel equals = new JLabel(" = ");
 		this.add(equals);
 
@@ -123,6 +125,10 @@ public class ConverterUI extends JFrame {
 		result.addActionListener(listener);
 	}
 
+	/**
+	 * Performing exit the unit programme by choosing exit in the menu
+	 *
+	 */
 	class ExitAction extends AbstractAction {
 		public void actionPerformed(ActionEvent event) {
 			System.exit(0);
@@ -152,20 +158,27 @@ public class ConverterUI extends JFrame {
 			if (type == UnitType.LENGTH) {
 				changeUnits(UnitType.LENGTH);
 				menu.setText("LENGTH");
+				setBounds(50, 50, 700, 120);
 			} else if (type == UnitType.AREA) {
 				changeUnits(UnitType.AREA);
 				menu.setText("AREA");
+				setBounds(50, 50, 800, 120);
 			} else if (type == UnitType.WEIGHT) {
 				changeUnits(UnitType.WEIGHT);
 				menu.setText("WEIGHT");
+				setBounds(50, 50, 700, 120);
 			} else if (type == UnitType.VOLUME) {
 				changeUnits(UnitType.VOLUME);
 				menu.setText("VOLUME");
+				setBounds(50, 50, 800, 120);
 			}
 		}
 
 	}
 
+	/**
+	 * Showing the frame rate with 600 * 120
+	 */
 	public void run() {
 		pack();
 		setBounds(50, 50, 600, 120);
@@ -219,7 +232,10 @@ public class ConverterUI extends JFrame {
 			menu.setText("Unit type");
 			firstUnit.removeAllItems();
 			secondUnit.removeAllItems();
-			
+			setBounds(50, 50, 600, 120);
+			input.setBackground(Color.white);
+			result.setBackground(Color.white);
+
 		}
 	}
 
@@ -234,7 +250,8 @@ public class ConverterUI extends JFrame {
 			input.setEditable(true);
 			result.setEditable(false);
 			rightToLeft.setSelected(false);
-
+			result.setBackground(Color.getHSBColor(12, 34, 83));
+			input.setBackground(Color.white);
 		}
 	}
 
@@ -249,6 +266,8 @@ public class ConverterUI extends JFrame {
 			input.setEditable(false);
 			result.setEditable(true);
 			leftToRight.setSelected(false);
+			input.setBackground(Color.getHSBColor(12, 34, 83));
+			result.setBackground(Color.white);
 		}
 	}
 }
