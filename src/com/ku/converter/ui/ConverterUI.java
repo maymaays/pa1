@@ -1,8 +1,7 @@
 package com.ku.converter.ui;
 
 /***
- * Respresents the programme of the conversions of length and distance 
- * by using a conversion factor
+ * Respresents the programme of the conversions of unit by using a conversion factor
  * @author Methawee Apinainarong 5810546714
  */
 
@@ -152,12 +151,16 @@ public class ConverterUI extends JFrame {
 
 			if (type == UnitType.LENGTH) {
 				changeUnits(UnitType.LENGTH);
+				menu.setText("LENGTH");
 			} else if (type == UnitType.AREA) {
 				changeUnits(UnitType.AREA);
+				menu.setText("AREA");
 			} else if (type == UnitType.WEIGHT) {
 				changeUnits(UnitType.WEIGHT);
+				menu.setText("WEIGHT");
 			} else if (type == UnitType.VOLUME) {
 				changeUnits(UnitType.VOLUME);
+				menu.setText("VOLUME");
 			}
 		}
 
@@ -166,7 +169,7 @@ public class ConverterUI extends JFrame {
 	public void run() {
 		pack();
 		setBounds(50, 50, 600, 120);
-		// setResizable(false);
+		setResizable(false);
 		setVisible(true);
 	}
 
@@ -213,6 +216,10 @@ public class ConverterUI extends JFrame {
 			result.setText("");
 			leftToRight.setSelected(false);
 			rightToLeft.setSelected(false);
+			menu.setText("Unit type");
+			firstUnit.removeAllItems();
+			secondUnit.removeAllItems();
+			
 		}
 	}
 
@@ -244,16 +251,4 @@ public class ConverterUI extends JFrame {
 			leftToRight.setSelected(false);
 		}
 	}
-
-	/***
-	 * run out the programme (the window will come up)
-	 */
-	public static void main(String[] args) {
-
-		UnitConverter unit = new UnitConverter();
-		ConverterUI convert = new ConverterUI(unit);
-		convert.run();
-
-	}
-
 }
