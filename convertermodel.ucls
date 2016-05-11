@@ -1,6 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.9" icons="true" automaticImage="JPEG" always-add-relationships="false" 
-  generalizations="true" realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  generalizations="true" realizations="true" associations="true" dependencies="true" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="com.ku.converter.controller.ControllerConverter" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/controller/ControllerConverter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="159" x="1594" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.ku.converter.ui.ConverterUI.ConvertButtonListener" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="215" x="1061" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.ku.converter.ui.ConverterUI.leftToRightListener" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="215" x="806" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.ku.converter.ui.ConverterUI.UnitAction" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="215" x="1316" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.ku.converter.ui.ConverterUI.rightToLeftListener" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="215" x="296" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.ku.converter.ui.ConverterUI.ClearButtonListener" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="215" x="41" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.ku.converter.ui.ConverterUI.ExitAction" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="215" x="551" y="571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.ku.converter.ui.ConverterUI" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/ui/ConverterUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="353" width="176" x="1397" y="178"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="9" language="java" name="com.ku.converter.unit.Area" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/unit/Area.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="299" width="187" x="1059" y="730"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="10" language="java" name="com.ku.converter.unit.Length" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/unit/Length.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="299" width="148" x="871" y="730"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <interface id="11" language="java" name="com.ku.converter.unit.Unit" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/unit/Unit.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="101" width="124" x="1185" y="1069"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <enumeration id="12" language="java" name="com.ku.converter.unit.Volume" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/unit/Volume.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="299" width="190" x="456" y="730"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="13" language="java" name="com.ku.converter.unit.Weight" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/unit/Weight.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="281" width="145" x="686" y="730"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="14" language="java" name="com.ku.converter.UnitConverter" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/UnitConverter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="203" x="1349" y="730"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="15" language="java" name="com.ku.converter.UnitFactory" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/UnitFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="155" width="164" x="1589" y="1069"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="16" language="java" name="com.ku.converter.UnitType" project="Unitconverter" 
+    file="/Unitconverter/src/com/ku/converter/UnitType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="155" width="137" x="1349" y="1069"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <dependency id="17">    
+    <bendpoint x="1276" y="730"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="19">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="20">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <nesting id="21">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </nesting>  
+  <dependency id="22">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="23">    
+    <bendpoint x="1297" y="730"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <realization id="24">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <dependency id="25">    
+    <bendpoint x="1624" y="571"/>    
+    <bendpoint x="1624" y="730"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <association id="26">    
+    <bendpoint x="1561" y="571"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="27" name="unitconverter"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="29">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <nesting id="30">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </nesting>  
+  <realization id="31">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <nesting id="32">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </nesting>  
+  <nesting id="33">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </nesting>  
+  <realization id="34">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <nesting id="35">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </nesting>  
+  <association id="36">    
+    <bendpoint x="1318" y="730"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="37" name="type"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="39">    
+    <bendpoint x="1603" y="178"/>    
+    <bendpoint x="1603" y="571"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="40">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <nesting id="41">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="4"/>  
+  </nesting>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="43">    
+    <bendpoint x="1582" y="571"/>    
+    <bendpoint x="1582" y="730"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
